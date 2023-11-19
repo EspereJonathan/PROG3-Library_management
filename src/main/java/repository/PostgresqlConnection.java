@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
-@Getter
+static static @Getter
 public class PostgresqlConnection{
     private Connection connection;
     private Statement statement;
