@@ -1,7 +1,6 @@
 package repository;
 
 
-import model.Author;
 import model.Book;
 import model.Topic;
 
@@ -79,6 +78,6 @@ public class BookCrudOperations implements CrudOperations<Book> {
 
     @Override
     public Book delete(Book toDelete) {
-        return BasicCrud.delete("book", toDelete.getId()) ? toDelete : null;
+        return SimpleCrud.delete("book", toDelete.getId()) ? toDelete : null;
     }
 }

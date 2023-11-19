@@ -1,21 +1,29 @@
 package model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import java.time.LocalDate;
 
-import java.sql.Date;
-import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
 
-import org.springframework.boot.autoconfigure.kafka.KafkaProperties.Retry.Topic;
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Getter
+@Setter
 public class Book {
-    private String id, bookName;
-    private long pageNumbers;
-    private Date releaseDate;
-    private List<Topic> topics;
+    private int bookId;
+    private String bookName;
+    private int pageNumbers;
+    private String topic;
+    private LocalDate releaseDate;
+    private String status;
     private Author author;
+
+    public Book(int bookId, String bookName, int pageNumbers, String topic, LocalDate releaseDate, String status, Author author) {
+        this.bookId = bookId;
+        this.bookName = bookName;
+        this.pageNumbers = pageNumbers;
+        this.topic = topic;
+        this.releaseDate = releaseDate;
+        this.status = status;
+        this.author = author;
+    }
+
 }

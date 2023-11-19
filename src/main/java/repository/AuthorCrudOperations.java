@@ -67,7 +67,7 @@ public class AuthorCrudOperations implements CrudOperations<Author>{
 
     @Override
     public Author delete(Author toDelete) {
-        return BasicCrud.delete("author", toDelete.getId()) ? toDelete : null;
+        return SimpleCrud.delete("author", toDelete.getId()) ? toDelete : null;
     }
 
     public static Author getOne(String id){
