@@ -1,4 +1,4 @@
-package model;
+package repository;
 
 public class Env {
     final public static String DB_URL = System.getenv("DB_URL");
